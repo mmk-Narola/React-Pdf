@@ -5,8 +5,10 @@ import { Page, Document, StyleSheet, Image } from "@react-pdf/renderer";
 import logo from "../../assets/logo.png";
 import InvoiceTitle from "./InvoiceTitle";
 import InvoiceNameDate from "./InvoiceNameDate";
-import InovieProjectDes from "./InovieProjectDes";
+import InovieProjectDes from "../GenerateInvoice/InvoiceProjectDes";
 import BillTo from "./BillTo";
+import InvoiceTermCond from "./InvoiceTermCond";
+import InvoiceFooter from "./InvoiceFooter";
 
 const styles = StyleSheet.create({
   page: {
@@ -45,6 +47,8 @@ const PdfDocument = () => {
         <InvoiceNameDate receiptNo={"3620"} date={"31/09/2023"} />
         <InovieProjectDes />
         <BillTo invoice={InvoiceData} />
+        <InvoiceTermCond />
+        <InvoiceFooter />
       </Page>
     </Document>
   );

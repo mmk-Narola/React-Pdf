@@ -16,13 +16,15 @@ const styles = StyleSheet.create({
   section: {
     // margin: 10,
     padding: 10,
+    position: "relative",
   },
   box: {
     width: "100%",
     height: 200,
-    backgroundColor: "lightgray",
+    backgroundColor: "#FFFF",
     borderRadius: 5,
     position: "relative",
+    border: "2px solid black",
   },
   text: {
     fontSize: 12,
@@ -31,21 +33,10 @@ const styles = StyleSheet.create({
     textDecoration: "underline",
     fontWeight: 400,
   },
-  text2: {
-    fontSize: 12,
-    textAlign: "center",
-    margin: "10px 10px 10px 10px",
-    fontWeight: 400,
-    position: "absolute",
-    bottom: 10,
-    left: 0,
-    right: 0,
-    paddingRight: 20,
-  },
   logo: {
     width: 30,
-    height: 15,
-    marginTop: 50,
+    height: 20,
+    marginRight: 10,
   },
   line: {
     borderTop: 1,
@@ -62,14 +53,32 @@ const InovieProjectDes = () => {
       <View style={styles.box}>
         <Text style={styles.text}>Project:-</Text>
         <View style={styles.line}></View>
-        <Text style={styles.text2}>
-          Follow Us:
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "flex-end",
+            position: "absolute",
+            bottom: 10,
+            left: 0,
+            right: 0,
+            paddingRight: 20,
+          }}
+        >
+          <Text
+            style={{
+              fontSize: 12,
+            }}
+          >
+            Follow Us:
+          </Text>
           <Image style={styles.logo} src={google} />
           <Image style={styles.logo} src={facebook} />
           <Image style={styles.logo} src={instagram} />
           <Image style={styles.logo} src={twitter} />
           <Image style={styles.logo} src={linkedin} />
-        </Text>
+        </View>
       </View>
     </View>
   );
