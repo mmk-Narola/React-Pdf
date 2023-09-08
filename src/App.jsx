@@ -12,9 +12,7 @@ const App = () => {
       </PDFViewer>
       <div className="download-link">
         <PDFDownloadLink document={<PdfDocument />} fileName="SVM.pdf">
-          {({ loading }) =>
-            loading ? <button>Loading...</button> : <button>Download</button>
-          }
+          {({ loading }) => (loading ? "Loading..." : "Download Invoice")}
         </PDFDownloadLink>
       </div>
     </div>
